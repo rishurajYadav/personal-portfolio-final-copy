@@ -17,11 +17,11 @@ const ContactSection = () => {
     e.preventDefault();
 
     try {
-      const res = await axios.post(
-        "http://localhost:3000/api/contact",
-        form,
-        { headers: { "Content-Type": "application/json" } }
-      );
+     axios.post(
+  `${API_URL}/api/contact`,
+  form,
+  { headers: { "Content-Type": "application/json" } }
+);
 
       alert("Message sent successfully");
 
