@@ -1,8 +1,9 @@
 import { Routes, Route } from "react-router-dom";
 
 import Home from "./pages/Home";
-//  import ContactUs from "./pages/ContactUs";
-import ContactUs from "./pages/contactus";
+ import ContactUs from "./pages/ContactUs";
+// import ContactUs from "./pages/ContactUs";
+
 
 // ADMIN PAGES
 import Login from "./pages/Login";
