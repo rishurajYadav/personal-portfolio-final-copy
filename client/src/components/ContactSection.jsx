@@ -15,11 +15,10 @@ const ContactSection = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+console.log("API_URL FROM ENV:", API_URL);
     try {
      axios.post(
   `${API_URL}/api/contact`,
-       console.log("API_URL FROM ENV:", API_URL);
   form,
   { headers: { "Content-Type": "application/json" } }
 );
