@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-
+const API_URL = import.meta.env.VITE_API_URL;
 const ContactSection = () => {
   const [form, setForm] = useState({
     email: "",
@@ -19,6 +19,7 @@ const ContactSection = () => {
     try {
      axios.post(
   `${API_URL}/api/contact`,
+       console.log("API_URL FROM ENV:", API_URL);
   form,
   { headers: { "Content-Type": "application/json" } }
 );
@@ -31,6 +32,9 @@ const ContactSection = () => {
         subject: "",
         message: "",
       });
+
+      
+
     } catch (err) {
       console.error("CONTACT ERROR:", err.response || err);
       alert("Failed to send message");
