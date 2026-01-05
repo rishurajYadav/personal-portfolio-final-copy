@@ -84,6 +84,14 @@ app.get("/", (req, res) => {
   res.send("Portfolio Backend Running on Render ");
 });
 
+app.use(
+  cors({
+    origin: "https://personal-portfolio-final-copy-2.onrender.com",
+    credentials: true,
+  })
+);
+
+
 // 🔹 Start server (REQUIRED for Render)
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
