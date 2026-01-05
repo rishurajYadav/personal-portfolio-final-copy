@@ -1,7 +1,8 @@
 import { Routes, Route } from "react-router-dom";
 
 import Home from "./pages/Home";
-import Contactus from "./pages/contactus";
+//  import ContactUs from "./pages/ContactUs";
+import ContactUs from "./pages/contactus";
 
 // ADMIN PAGES
 import Login from "./pages/Login";
@@ -16,7 +17,7 @@ const AppRoutes = () => {
     <Routes>
       {/* PUBLIC */}
       <Route path="/" element={<Home />} />
-      <Route path="/contact" element={<Contactus />} />
+      <Route path="/contact" element={<ContactUs />} />
 
       {/* ADMIN LOGIN */}
       <Route path="/admin/login" element={<Login />} />

@@ -1,4 +1,4 @@
-const contactus = () => {
+const ContactUs = () => {
   return (
     <div style={{ padding: "20px" }}>
       <h1>Contact Me</h1>
@@ -9,7 +9,8 @@ const contactus = () => {
   );
 };
 
-export default contactus;
+export default ContactUs;
+
 
 
 
