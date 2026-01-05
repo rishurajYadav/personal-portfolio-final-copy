@@ -52,6 +52,7 @@
 const express = require("express");
 const cors = require("cors");
 const path = require("path");
+require("dotenv").config();
 
 const connectDB = require("./config/db");
 
@@ -62,45 +63,29 @@ const contactRoutes = require("./routes/contactRoutes");
 
 const app = express();
 
-// Middleware
+// 🔹 Connect DB
+connectDB();
+
+// 🔹 Middleware
 app.use(cors());
 app.use(express.json());
 
-// Static files
+// 🔹 Static uploads (local filesystem works on Render)
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
-// Connect DB lazily (VERY IMPORTANT)
-let isConnected = false;
-
-async function ensureDB() {
-  if (!isConnected) {
-    await connectDB();
-    isConnected = true;
-  }
-}
-
-// Ensure DB before every request
-app.use(async (req, res, next) => {
-  try {
-    await ensureDB();
-    next();
-  } catch (err) {
-    console.error("DB connection failed:", err.message);
-    res.status(500).json({ error: "Database connection failed" });
-  }
-});
-
-// Routes
+// 🔹 Routes
 app.use("/api/projects", projectRoutes);
 app.use("/api/auth", authRoutes);
 app.use("/api/admin", adminRoutes);
 app.use("/api", contactRoutes);
 
-// Health check route
+// 🔹 Health check
 app.get("/", (req, res) => {
-  res.send("Portfolio Backend Running ");
+  res.send("Portfolio Backend Running on Render ");
 });
 
-//  NO app.listen()
-//  Export app for Vercel
-module.exports = app;
+// 🔹 Start server (REQUIRED for Render)
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
