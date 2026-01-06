@@ -99,7 +99,7 @@ const Navbar = () => {
         </NavButton>
 
         <a
-          href="https://drive.google.com/file/d/1WRutpGZHi-hoA1BtC7E6sCmhC4C1LH-v/view?usp=sharing"
+          href="https://drive.google.com/file/d/18mHzSNQ0CKYJ1WPGJ12v5PNoUsiEb588/view?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
           className="
