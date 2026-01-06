@@ -10,7 +10,8 @@ const Navbar = () => {
   const { admin, logout } = useContext(AuthContext);
 
   // PUBLIC PROFILE IMAGE (NOT DEPENDENT ON ADMIN)
-  const BASE_URL = "http://localhost:3000"; // backend
+  const BASE_URL = "https://personal-portfolio-final-copy-1.onrender.com"; // backend
+  //http://localhost:3000
   const storedProfileImage = localStorage.getItem("profileImage");
 
   const profileImage = storedProfileImage
