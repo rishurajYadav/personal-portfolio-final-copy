@@ -10,8 +10,7 @@ const Navbar = () => {
   const { admin, logout } = useContext(AuthContext);
 
   // PUBLIC PROFILE IMAGE (NOT DEPENDENT ON ADMIN)
-  const BASE_URL = "https://personal-portfolio-final-copy-1.onrender.com"; // backend
-  //http://localhost:3000
+  const BASE_URL = "http://localhost:3000"; // backend
   const storedProfileImage = localStorage.getItem("profileImage");
 
   const profileImage = storedProfileImage
@@ -52,7 +51,7 @@ const Navbar = () => {
         md:px-6 md:py-2 md:text-base
         lg:px-10 lg:text-xl
 
-        rounded-full text-white
+        rounded-full text-black
         transition-all duration-300
         whitespace-nowrap
 
@@ -78,10 +77,10 @@ const Navbar = () => {
           md:px-6 md:py-3
 
           rounded-2xl sm:rounded-full
-          bg-black backdrop-blur-md
+          bg-amber-50 backdrop-blur-md
           border border-white/20 shadow-xl
 
-          max-w-[95%]
+          max-w-[95%] 
         "
       >
         <NavButton onClick={() => scrollToSection("home")}>Home</NavButton>
