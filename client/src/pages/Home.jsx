@@ -559,7 +559,8 @@ const Home = () => {
   return (
     <div >
 {/* HERO */}
-<section
+         
+{/* <section
   id="home"
   className="min-h-screen flex items-center bg-gradient-to-br from-[#0d0d28] via-[#0f0f2d] to-[#050510] pt-0"
 >
@@ -630,8 +631,91 @@ const Home = () => {
 </div>
 
   </div>
+</section> */}
+//////
+         {/* HERO */}
+<section
+  id="home"
+  className="min-h-screen flex items-center bg-gradient-to-br from-[#0d0d28] via-[#0f0f2d] to-[#050510]"
+>
+  <div className="max-w-7xl mx-auto px-4 flex flex-row items-center justify-between gap-6 flex-wrap">
+
+    {/* LEFT TEXT */}
+    <div className="flex-1 min-w-[260px] text-left">
+      <h1 className="text-5xl sm:text-6xl md:text-5xl font-extrabold mb-6">
+        <span className="text-orange-500">
+          Hi,I’m a Rishu Raj 👋
+        </span>
+      </h1>
+
+      <p className="text-3xl sm:text-4xl md:text-2xl text-white mb-6 font-bold">
+        <span
+          className="inline-block bg-gradient-to-r from-purple-400 via-pink-500 to-cyan-400
+          bg-[length:200%_200%] text-transparent bg-clip-text animate-gradientSlide"
+        >
+          MERN STACK Developer
+        </span>{" "}
+        | Backend Focused
+      </p>
+
+      <p className="text-lg sm:text-xl md:text-2xl text-white mb-8 leading-relaxed">
+        I am a full-stack MERN developer who enjoys building scalable web
+        applications, secure backends, and clean user interfaces.
+        creating beautiful digital experience with modern web technologies
+      </p>
+
+      <button
+        onClick={() =>
+          document
+            .getElementById("skills")
+            ?.scrollIntoView({ behavior: "smooth" })
+        }
+        className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4
+        rounded-full text-lg transition transform hover:scale-105"
+      >
+        View My Skills
+      </button>
+    </div>
+
+    {/* RIGHT IMAGE */}
+    <div className="flex-1 min-w-[240px] flex justify-center md:justify-end">
+      <div className="relative w-[220px] h-[220px] sm:w-[280px] sm:h-[280px] md:w-[400px] md:h-[400px] group">
+
+        {/* OUTER GLOW RING */}
+        <div
+          className="absolute inset-0 rounded-full blur-xl opacity-70
+          bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-400
+          animate-pulseSlow"
+        />
+
+        {/* ROTATING BORDER */}
+        <div
+          className="absolute inset-0 rounded-full
+          bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-400
+          animate-spinSlow"
+        />
+
+        <div
+          className="relative z-10 w-full h-full rounded-full p-3
+          bg-emerald-50
+          transform transition duration-700
+          group-hover:scale-105 group-hover:rotate-2"
+        >
+          <img
+            src={profileImg}
+            alt="Profile"
+            className="w-full h-full object-cover rounded-full shadow-2xl"
+          />
+        </div>
+      </div>
+    </div>
+
+  </div>
 </section>
-  
+
+
+
+         
 <section
   id="about"
   className="py-24 bg-gradient-to-br from-[#625b90] via-[#232351] to-[#10102e]"
